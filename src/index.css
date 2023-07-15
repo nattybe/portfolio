@@ -11,34 +11,129 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
 .main {
   width: 100px;
   height: 600px;
 }
+
+.ma-pic {
+  height: 95vh;
+
+}
+
 .for-pic {
-  position: absolute;
-  margin-left: 150px;
-  margin-top: 200px;
+  /* border-top: ; */
 }
-.just {
+
+.for-pic .welcome {
+  background: linear-gradient(90deg, rgb(63, 54, 4), white);
+  padding-right: 200px;
 }
+
+.nav-bg {
+  background: linear-gradient(gold 93%, rgb(231, 119, 27));
+
+}
+
+div[id="home"] {
+  border-bottom: 10px ridge black;
+}
+
+.skills-box {
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  overflow-x: scroll;
+}
+
+.single-skill {
+  /* display: flex; */
+  width: 250px;
+  height: 350px;
+  border-radius: 10px;
+  border-color: rgb(49, 49, 49);
+  border-width: 10px;
+  border-style: double;
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin: 0px 10px;
+  box-shadow: 0px 0px 10px rgb(0, 0, 0);
+  /* transition: 2s 2s ease-in; */
+
+  .description {
+    height: 175px;
+    position: relative;
+    top: 155px;
+    color: white;
+    padding-top: 50px;
+    text-align: center;
+    font-size: 48px;
+
+    background: linear-gradient(0deg,#61DAFB 50%, transparent);
+    transition: 300ms 0s ease-in;
+
+  }
+
+
+}
+
+.single-skill:hover {
+  transition: all 2s 2s linear;
+  width:300px !important;
+  .description {
+    /* font-size: 20px; */
+    height: 100%;
+    background: linear-gradient(0deg, rgb(0, 0, 0) 10%, transparent);
+    top: 0;
+    text-shadow: 10px 10px 10px #61DAFB;
+  }
+
+
+}
+
+.for-pic .welcome {
+  padding-top: 150px;
+  font-family: 'Times New Roman', Times, serif;
+  /* background: linear-gradient(90deg,#ffffff, #000000);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; */
+  color: white;
+  padding-left: 100px;
+  max-width: 60vw;
+}
+
+.for-pic .welcome h1 {
+  font-weight: 900;
+  font-size: 70px;
+}
+
+.for-pic .welcome h3 {
+  text-align: justify;
+  text-justify: distribute;
+}
+
+.just {}
+
 .just div {
   width: 100%;
   justify-content: space-around;
 }
 
 .main-nav {
-  background: linear-gradient( 0deg, rgb(252, 226, 78) ,white,gold 15%);
+  background: linear-gradient(0deg, rgb(252, 226, 78), white, gold 15%);
   /* animation: ru 4s ease-in-out 0s infinite; */
 }
+
 @keyframes ru {
   0% {
-    background: linear-gradient(25deg, gold 10%, brown , gold);
+    background: linear-gradient(25deg, gold 10%, brown, gold);
   }
+
   50% {
-    background: linear-gradient(25deg, gold 30%, brown , gold);
+    background: linear-gradient(25deg, gold 30%, brown, gold);
   }
+
   100% {
-    background: linear-gradient(25deg, gold 60%, brown , gold);
+    background: linear-gradient(25deg, gold 60%, brown, gold);
   }
 }

@@ -1,12 +1,9 @@
 import React, { Component } from 'react';
-import {Footer} from 'react-bootstrap';
+// import {Footer} from 'react-bootstrap';
 class Foots extends Component {
-    constructor(props) {
-        super(props);
-    }
-    state = {  }
+    state = { cont:"hello foosa lovers" }
     render() { 
-        return ( <Footer>hello foot lovers</Footer> );
+        return ( <footer>{this.state.cont}</footer> );
     }
 }
  
