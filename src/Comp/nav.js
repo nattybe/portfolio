@@ -1,15 +1,14 @@
 import React, { Component } from "react";
-import {
-  Navbar,
-  Nav,
-  NavDropdown,
-  Form,
-  FormControl,
-  Button,
-} from "react-bootstrap";
-import 'bootstrap/dist/css/bootstrap.css'
+import { Navbar, Nav} from "react-bootstrap";
+import "bootstrap/dist/css/bootstrap.css";
 export default class Navs extends Component {
   render() {
+    const openContact = () => {
+      const diag = document.getElementById("contact-diag");
+      // const btn=document.getElementById("send-button");
+      diag.close();
+      diag.show();
+    };
     return (
       // <Navbar  expand="lg" sticky="top" className="shadow p-2 main-nav">
       //   <Navbar.Brand href="#home">Home</Navbar.Brand>
@@ -36,26 +35,30 @@ export default class Navs extends Component {
       //     </Form> */}
       //   </Navbar.Collapse>
       // </Navbar>
-      <Navbar className="nav-bg" expand="lg" >
+      <Navbar className="nav-bg" expand="lg">
         <Navbar.Brand href="#home">Home</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        <Navbar.Collapse id="basic-navbar-nav" >
+        <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="mr-auto ">
-            <Nav.Link href="#projects" disabled>Projects</Nav.Link>
-            <Nav.Link href="#skills" >Skills</Nav.Link>
-            <Nav.Link href="#link" disabled>Resume</Nav.Link>
-            <Nav.Link href="#contact-me">Contact Me</Nav.Link>
-            {/* <NavDropdown title="Dropdown" id="basic-nav-dropdown">
-              <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
-              <NavDropdown.Divider />
-              <NavDropdown.Item href="#action/3.4">
-                Separated link
-              </NavDropdown.Item>
-            </NavDropdown> */}
+            <Nav.Link href="#projects" disabled>
+              Projects
+            </Nav.Link>
+            <Nav.Link href="#skills">Skills</Nav.Link>
+            <Nav.Link href="#link" disabled>
+              Resume
+            </Nav.Link>
+            <Nav.Link onClick={openContact}>Contact Me</Nav.Link>
           </Nav>
         </Navbar.Collapse>
+
+        <button
+          className="contact-button rounded-5 btn bg-warning btn-border border-danger"
+          onClick={() => {
+            openContact();
+          }}
+        >
+          <i className="fas fa-comment-alt" />
+        </button>
       </Navbar>
     );
   }

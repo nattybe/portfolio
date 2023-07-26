@@ -12,9 +12,10 @@ function Main(params) {
     // <LeftTabsExample />
     // </div>
     <div className="">
-    <Navs/>
-    <Bods/>
-    <Foots />
+      <Navs />
+      
+      <Bods />
+      <Foots />
     </div>
   );
 }

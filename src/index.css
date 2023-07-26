@@ -42,9 +42,11 @@ code {
 div[id="home"] {
   border-bottom: 10px ridge black;
 }
-#skills{
+
+#skills {
   /* background: linear-gradient(90deg, rgb(63, 54, 4), white); */
 }
+
 .skills-box {
   justify-content: space-between;
   flex-wrap: nowrap;
@@ -127,9 +129,93 @@ div[id="home"] {
 
 }
 
+.contact-button {
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  z-index: 100;
+  box-shadow: 0px 0px 5px orange;
+}
+
+#contact-diag{
+  position: fixed;
+  height: 75dvh;
+  bottom: 88px;
+  left: 900px;
+  /* right: 70px; */
+  max-width: 50%;
+}
+.diag-header {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid black;
+}
+
+.contact-send {
+  border: 0;
+  background: transparent;
+  margin-left: -30px;
+}
+
+.messenger{
+  height: 100%;
+}
+.messenger-body{
+  height: 90%;
+  /* border-width: 20px; */
+  /* border-style: solid; */
+
+}
+.messages {
+  flex-direction: column;
+  padding: 5px;
+  overflow-y: scroll;
+  height: 90%;
+  border-bottom: 2px solid #e79a0c;
+  .owner {
+    margin-top: 5px;
+    max-width: 70%;
+    border: 2px solid #000;
+    padding: 2px;
+    border-radius: 8px;
+    /* margin-left: 5px; */
+    border-bottom-left-radius: 0;
+    width: fit-content;
+    background-color: #e79a0c;
+  }
+
+  .not-owner {
+    margin-top: 5px;
+    max-width: 70%;
+    padding: 2px;
+    border: 2px solid #000;
+    border-radius: 8px;
+    /* margin-right: 5px; */
+    border-bottom-right-radius: 0;
+    width: fit-content;
+    align-self:end;
+    background: #61DAFB;
+
+  }
+}
+
+.diag-close {
+  height: min-content;
+  align-self: center;
+  margin-right: 5px;
+  padding: 0px 5px;
+  font-weight: 900;
+  /* box-shadow: 1px 1px 10px #000; */
+  border: 0px solid #000;
+  background-color: transparent;
+  border-radius: 20%;
+  color: crimson;
+}
+
 .contact-me {
   width: 50vw !important;
   background: linear-gradient(180deg, #e79a0c 900%, black 10%);
+
   .through {
     display: flex;
     width: 30%;
@@ -186,30 +272,34 @@ div[id="home"] {
   text-justify: distribute;
 }
 
-.just{}
+.just {}
 
 .just div {
   width: 100%;
   justify-content: space-around;
 }
-footer .upper-footer ul li{
+
+footer .upper-footer ul li {
   list-style-type: none;
   margin-top: 10px;
 }
-footer:last-child{
 
-}
-.upper-footer ul li a{
+footer:last-child {}
+
+.upper-footer ul li a {
   text-decoration: none;
 }
+
 footer {
   margin-top: 20px;
   /* height: 30vh; */
   background-color: #e79a0c;
 }
-.upper-footer{
+
+.upper-footer {
   justify-content: space-around;
 }
+
 .main-nav {
   background: linear-gradient(0deg, rgb(252, 226, 78), white, gold 15%);
   /* animation: ru 4s ease-in-out 0s infinite; */
