@@ -17,6 +17,7 @@ import {
   where,
   orderBy,
   or,
+  and,
 } from "firebase/firestore";
 import { useEffect } from "react";
 
@@ -40,12 +41,13 @@ export default function Contacts() {
     setMessages([]);
     // alert("Signed out");
   };
+  // a code that gets documents from a firestore collection if their "to" is equal to the users id or "from" is equal to the user id and order by createdAt?
+
   const messagesCollectionRef = collection(firestore, "messages");
   const getMessages = async () => {
     const q = query(
       messagesCollectionRef,
-      (or(where("from", "==", user.uid), where("to", "==", user.uid)),
-      orderBy("createdAt", "asc"))
+      (or(where("from", "==", user.uid), where("to", "==", user.uid)),orderBy("createdAt"))
     );
     const data = await getDocs(q).catch((err) => {
       // alert(err.code,err.line);
@@ -56,7 +58,20 @@ export default function Contacts() {
     // }); //.then(() =>{
     //   alert("Success");
     // })
+    /**
+     * this is the structure of the message document
+     {
+      content : string,
+      createdAt : timestamp,
+      to: string,
+      from: string,
+     }
+    the above object is a structure of a document in firestore database
+    i want to get all the documents in the collection which have a "to" which is equal to X or which have a "from" which is equal to X and orderd by createdAt 
+
+     */
     console.log(data);
+
     const filteredData = data.docs.map((doc) => ({
       ...doc.data(),
       id: doc.id,

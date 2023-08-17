@@ -44,7 +44,7 @@ export default class Navs extends Component {
               Projects
             </Nav.Link>
             <Nav.Link href="#skills">Skills</Nav.Link>
-            <Nav.Link href="#link" disabled>
+            <Nav.Link href="/CV-General.pdf" >
               Resume
             </Nav.Link>
             <Nav.Link onClick={openContact}>Contact Me</Nav.Link>
